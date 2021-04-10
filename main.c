@@ -17,6 +17,7 @@ int main() {
     sigemptyset(&sigact.sa_mask);
     sigact.sa_flags = 0;
     sigaction(SIGINT, &sigact, NULL);
+    sigaction(SIGUSR1, &sigact, NULL);
     sigaction(SIGTERM, &sigact, NULL);
     sigaction(SIGQUIT, &sigact, NULL);
     sigaction(SIGPIPE, &sigact, NULL);

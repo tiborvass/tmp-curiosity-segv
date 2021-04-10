@@ -8,7 +8,7 @@ but I'm guessing is the same root cause.
 
 ```
 $ make
-$ LD_LIBRARY_PATH=. ./main
+$ LD_LIBRARY_PATH=. ./main & ( sleep 1; kill -USR1 %1 )
 ```
 
 When C-c'd:
