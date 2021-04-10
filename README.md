@@ -8,8 +8,7 @@ but I'm guessing is the same root cause.
 
 ```
 $ make
-$ # Copy plugin.so to somewhere on your library path
-$ LD_PRELOAD=..../plugin.so ./main
+$ LD_LIBRARY_PATH=. ./main
 ```
 
 When C-c'd:

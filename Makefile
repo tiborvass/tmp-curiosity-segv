@@ -1,16 +1,16 @@
 
-LDFLAGS=-lm
+LDFLAGS=-L. -lplugin
 
 
-all: main plugin.so
+all: main
 
-main:
-	gcc -o main main.c $(LDFLAGS)
+main: libplugin.so
+	gcc -g -ggdb -o main main.c $(LDFLAGS)
 
-plugin.so:
-	go build --buildmode=c-shared -o plugin.so plugin.go
+libplugin.so:
+	go build --buildmode=c-shared -o libplugin.so plugin.go
 
 clean:
-	rm -f plugin.so main
+	rm -f *plugin.so main
 
 .PHONY: all clean

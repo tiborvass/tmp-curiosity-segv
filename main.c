@@ -6,7 +6,8 @@
 
 static void sighandler(int signum) {
     fprintf(stderr, "Signal caught, exiting!\n");
-    acos(3.14);
+    fprintf(stderr, "acos = %lf\n", acos(3.14));
+    fprintf(stderr, "Past Go call!\n");
     exit(0);
 }
 
