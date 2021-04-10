@@ -7,7 +7,7 @@
 static void sighandler(int signum) {
     fprintf(stderr, "Signal caught, exiting!\n");
     acos(3.14);
-    exit(0);
+    fprintf(stderr, "acos returned\n");
 }
 
 int main() {
@@ -22,6 +22,5 @@ int main() {
 
     fprintf(stderr, "Loaded; waiting for SIGINT\n");
     asin(3.14);
-
-    sleep(0xFFFFFFFF);
+    fprintf(stderr, "asin returned, this is good!\n");
 }
