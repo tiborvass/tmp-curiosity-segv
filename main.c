@@ -23,6 +23,7 @@ int main() {
     sigaction(SIGPIPE, &sigact, NULL);
 
     fprintf(stderr, "Loaded; waiting for SIGINT\n");
+    acos(3.14);
     asin(3.14);
 
     sleep(0xFFFFFFFF);
